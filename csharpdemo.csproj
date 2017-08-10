@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.EFListCourses</StartupObject>
+    <StartupObject>csharpdemo.EFDeleteCourseWithSP</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFDeleteCourseWithSP.cs" />
+    <Compile Include="EFDeleteCourse.cs" />
+    <Compile Include="EFUpdateCourse.cs" />
+    <Compile Include="EFAddCourse.cs" />
     <Compile Include="AddCourse.cs" />
     <Compile Include="AverageNumbers.cs" />
     <Compile Include="Book.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="DeserializeDemo.cs" />
     <Compile Include="DisplayFIle.cs" />
     <Compile Include="EFCourse.cs" />
+    <Compile Include="EFTopic.cs" />
     <Compile Include="EmailsWriter.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Factors.cs" />

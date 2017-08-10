@@ -11,5 +11,7 @@ namespace csharpdemo
 
         public virtual DbSet<EFCourse> Courses { get; set; }
 
+        //public virtual DbSet<EFTopic> Topics { get; set; }
+
     }
 }

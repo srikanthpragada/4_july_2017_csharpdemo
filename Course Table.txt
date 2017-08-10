@@ -1,0 +1,25 @@
+CREATE TABLE Courses (
+    [Id]       INT          IDENTITY  primary key,
+    [Name]     VARCHAR (30) NOT NULL,
+    [Duration] INT          NULL,
+    [Fee]      INT          NULL
+);
+
+
+create table Topics
+(
+ Id integer identity primary key,
+ Topic varchar(50),
+ Hours  integer,
+ CourseId integer references courses(id) on delete cascade
+)
+
+
+
+CREATE PROCEDURE [dbo].[DeleteCourse]
+	@id int
+AS
+  delete from courses where id = @id;
+
+  if @@rowcount = 0
+     raiserror('Course Not Found',16,1)

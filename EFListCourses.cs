@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ namespace csharpdemo
         public static void Main()
         {
             STDbContext dc = new STDbContext();
+            Database.SetInitializer(new NullDatabaseInitializer<STDbContext>());
+
             dc.Database.Log = Console.WriteLine;
 
             var courses = from c in dc.Courses
@@ -19,7 +22,9 @@ namespace csharpdemo
                           select c;
 
             foreach (var c in courses)
+            {
                 Console.WriteLine("{0} - {1}", c.Title, c.Fee);
+            }
 
 
         }
